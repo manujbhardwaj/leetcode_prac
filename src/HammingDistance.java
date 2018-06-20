@@ -66,6 +66,22 @@ The above arrows point to positions where the corresponding bits are different.
     }
 */
 
+
+/*
+	var hammingDistance = function(x, y) {
+		let mask = x ^ y;
+		let count = 0;
+
+		while (mask > 0) {
+			count += mask & 1;
+			mask >>= 1;
+		}
+
+		return count;
+	}
+	So every time we found 1 at the end of the mask we increase count by 1 and in the end we shift number by one to the right.
+*/
+
 public class HammingDistance {
     public int hammingDistance(int x, int y) {
         int xor = x ^ y, count = 0;
